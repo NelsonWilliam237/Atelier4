@@ -25,3 +25,16 @@ class Film extends Media {
     print("Ceci est un Film : '$titre' d’une durée de $dureeMinutes minutes.");
   }
 }
+
+void main() {
+  List<Media> catalogue = [];
+
+  catalogue.add(Livre("Atteindre l'excellence", "Robert Greene"));
+  catalogue.add(Livre("Reflechissez et devenez riche", "Napoleaon Hill"));
+  catalogue.add(Film("Insterstellar", 169));
+  catalogue.add(Film("Pirate des caraibes 1", 145));
+
+  for (var media in catalogue) {
+    media.afficherType();
+  }
+}
