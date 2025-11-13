@@ -16,9 +16,9 @@ class Compte {
 }
 
 void main() {
-  Compte compte1 = Compte("CPT12345");
+  Compte compte1 = Compte("300133071");
 
   compte1.depot(150.0);
 
-  print("Solde du compte ${compte1.numeroCompte} : ${compte1.solde}");
+  print("le Solde du compte ${compte1.numeroCompte} : ${compte1.solde}");
 }
