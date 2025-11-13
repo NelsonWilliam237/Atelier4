@@ -1,6 +1,7 @@
 class Compte {
-  double _solde;
-  double get solde => _solde;
+  double _solde = 0.0;
   final String numeroCompte;
+
   Compte(this.numeroCompte, [this._solde = 0.0]);
+  String get solde => "$_solde.toStringAsfixed(2) \$";
 }
