@@ -14,3 +14,27 @@ class ServeurApi implements Connectable {
     print("ServeurApi : Deconnexion reussie");
   }
 }
+
+class BaseDeDonnees implements Connectable {
+  @override
+  void connecter(String utilisateur) {
+    print("BaseDeDonnees : Connexion ouverte pour $utilisateur.");
+  }
+
+  @override
+  void deconnecter() {
+    print("BaseDeDonnees : Déconnexion effectuée.");
+  }
+}
+
+void main() {
+  var api = ServeurApi();
+  var db = BaseDeDonnees();
+
+  List<Connectable> services = [api, db];
+
+  for (var service in services) {
+    service.connecter("William");
+    service.deconnecter();
+  }
+}
